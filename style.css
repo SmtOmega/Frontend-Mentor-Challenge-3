@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 100%, 74%) ;
+    color: white;
+    background-image: url('./images/bg-intro-desktop.png');
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+
+}
+
+.container > div {
+    flex: 1;
+    padding: 0 20px;
+}
+h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+p {
+    opacity: 0.7;
+    font-size: 15px;
+}
+
+.box {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.box-blue {
+    background-color: hsl(248, 32%, 49%);
+    padding: 20px;
+}
+.box-blue p {
+    margin: 0;
+}
+
+input{
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%);
+    display: block;  
+}
+input:focus{
+    border: 1px solid hsl(249, 10%, 26%);
+    outline: none;
+}
+
+.form-control{
+    margin-bottom: 30px;
+    position: relative;
+}
+.form-control.error input{
+    border-color: hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+}
+.form-control img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    height: 20px;
+    opacity: 0;
+}
+.form-control.error img{
+    opacity: 1;
+}
+.form-control small {
+    color: hsl(0, 100%, 74%);
+    text-align: right;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    opacity: 0;
+}
+.form-control.error small{
+    opacity: 1;
+}
+button {
+    background-color: hsl(154, 59%, 51%);
+    box-shadow: 1px 2px 1px hsl(154, 59%, 45%);
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.4s ease;
+}
+button:focus{
+    outline: none;
+}
+button:active{
+    box-shadow: 0 0 hsl(154, 59%, 45%);
+    transform: translateY(2px);
+}
+
+small {
+    display: block;
+    color: #aaa;
+    font-size: 12px;
+    margin-top:10px;
+}
+
+small a {
+    color: hsl(0, 100%, 74%) ;
+    text-decoration: none;
+}
+@media screen and (max-width: 760px){
+    .container {
+        flex-direction: column;
+    }
+    h1 {
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+}
